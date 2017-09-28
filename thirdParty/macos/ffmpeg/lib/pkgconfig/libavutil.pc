@@ -1,0 +1,14 @@
+prefix=/Users/xiaoliumac/gitp/six-leo/FFmpeg_Compile/macos/build/ffmpeg-x86_64/output
+exec_prefix=${prefix}
+libdir=/Users/xiaoliumac/gitp/six-leo/FFmpeg_Compile/macos/build/ffmpeg-x86_64/output/lib
+includedir=/Users/xiaoliumac/gitp/six-leo/FFmpeg_Compile/macos/build/ffmpeg-x86_64/output/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 55.75.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil -lm
+Libs.private: 
+Cflags: -I${includedir}
