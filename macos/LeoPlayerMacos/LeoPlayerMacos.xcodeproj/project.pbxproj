@@ -26,13 +26,11 @@
 		94476E7C1F7CCCA00023627B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94476E7B1F7CCCA00023627B /* Carbon.framework */; };
 		94476E7E1F7CCCA70023627B /* ForceFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94476E7D1F7CCCA70023627B /* ForceFeedback.framework */; };
 		94476E801F7D11220023627B /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94476E7F1F7D11220023627B /* VideoToolbox.framework */; };
-		94476E821F7D11520023627B /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 94476E811F7D11520023627B /* libiconv.tbd */; };
 		94476E841F7D11BF0023627B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94476E831F7D11BF0023627B /* OpenGL.framework */; };
 		94476E861F7D12870023627B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94476E851F7D12870023627B /* CoreMedia.framework */; };
-		94476E8A1F7D2FB20023627B /* liblzma.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 94476E891F7D2FB20023627B /* liblzma.tbd */; };
-		94476E8C1F7D33710023627B /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 94476E8B1F7D33710023627B /* libstdc++.tbd */; };
 		94476E8E1F7D337B0023627B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94476E8D1F7D337B0023627B /* QuartzCore.framework */; };
 		94476E901F7D33930023627B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94476E8F1F7D33930023627B /* Security.framework */; };
+		94F51AD81F7E0B1E008C43E6 /* liblzma.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 94476E891F7D2FB20023627B /* liblzma.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -77,6 +75,8 @@
 		94476E8B1F7D33710023627B /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		94476E8D1F7D337B0023627B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		94476E8F1F7D33930023627B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		94F51ADA1F7E1607008C43E6 /* ff_play.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ff_play.h; sourceTree = "<group>"; };
+		94F51ADB1F7E1913008C43E6 /* ff_play_def.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ff_play_def.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,13 +84,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F51AD81F7E0B1E008C43E6 /* liblzma.tbd in Frameworks */,
 				94476E901F7D33930023627B /* Security.framework in Frameworks */,
 				94476E8E1F7D337B0023627B /* QuartzCore.framework in Frameworks */,
-				94476E8C1F7D33710023627B /* libstdc++.tbd in Frameworks */,
-				94476E8A1F7D2FB20023627B /* liblzma.tbd in Frameworks */,
 				94476E861F7D12870023627B /* CoreMedia.framework in Frameworks */,
 				94476E841F7D11BF0023627B /* OpenGL.framework in Frameworks */,
-				94476E821F7D11520023627B /* libiconv.tbd in Frameworks */,
 				94476E801F7D11220023627B /* VideoToolbox.framework in Frameworks */,
 				94476E7E1F7CCCA70023627B /* ForceFeedback.framework in Frameworks */,
 				94476E7C1F7CCCA00023627B /* Carbon.framework in Frameworks */,
@@ -144,7 +142,7 @@
 		94476E571F7CC8360023627B /* leomedia */ = {
 			isa = PBXGroup;
 			children = (
-				94476E581F7CC8360023627B /* ff_play.c */,
+				94F51AD91F7E15A0008C43E6 /* leoplayer */,
 			);
 			name = leomedia;
 			path = ../../leomedia;
@@ -181,6 +179,16 @@
 				94476E5D1F7CCB9C0023627B /* libswscale.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94F51AD91F7E15A0008C43E6 /* leoplayer */ = {
+			isa = PBXGroup;
+			children = (
+				94476E581F7CC8360023627B /* ff_play.c */,
+				94F51ADA1F7E1607008C43E6 /* ff_play.h */,
+				94F51ADB1F7E1913008C43E6 /* ff_play_def.h */,
+			);
+			path = leoplayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
