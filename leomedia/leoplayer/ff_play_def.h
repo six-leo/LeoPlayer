@@ -348,7 +348,7 @@ static int64_t audio_callback_time;
 
 static AVPacket flush_pkt;
 
-#define FF_QUIT_EVENT    (SDL_USEREVENT + 2)
+//#define FF_QUIT_EVENT    (SDL_USEREVENT + 2)
 
 static SDL_Window *window;
 static SDL_Renderer *renderer;
@@ -397,26 +397,26 @@ static AVDictionary *format_opts, *codec_opts, *resample_opts;
 #define FF_VOLUME_SET_EVENT (SDL_USEREVENT + 17)
 #define FF_MUTE_EVENT (SDL_USEREVENT + 18)
 #define DD_BASE_TIME 1000.0
-
-typedef void(*OnDDFFplayEvent)(void *ist, int status, int code);
-typedef int(*DDFFplayDecoderInit)(void*ist, AVCodecContext ** codecCtx, AVCodec *codec);
-typedef int(*DDFFplayDecoderUninit)(void*ist, AVCodecContext * codecCtx);
-
-typedef int(*DDFFplayDecoderCheck)(void *ist);
-typedef void(*DDFFplayDecoderUpdateDisplay)(void *ist,AVCodecContext *avctx, AVFrame *frame);
-
-typedef void(*DDFFplayDecoderSendPacket)(void *ist,AVCodecContext *avctx, AVPacket *packet);
-typedef int (*DDFFplayerDecoderReceiveFrame)(void *ist,AVCodecContext *avctx, AVFrame *frame);
-
-static OnDDFFplayEvent play_event;
-static DDFFplayDecoderInit decoder_init_event;
-static DDFFplayDecoderUninit decoder_uninit_event;
-static DDFFplayDecoderCheck decoder_check_event;
-static DDFFplayDecoderUpdateDisplay decoder_update_event;
-static DDFFplayDecoderSendPacket decoder_send_packet_event;
-static DDFFplayerDecoderReceiveFrame decoder_receive_frame_event;
-static void *ddffplayer;
-
+//
+//typedef void(*OnDDFFplayEvent)(void *ist, int status, int code);
+//typedef int(*DDFFplayDecoderInit)(void*ist, AVCodecContext ** codecCtx, AVCodec *codec);
+//typedef int(*DDFFplayDecoderUninit)(void*ist, AVCodecContext * codecCtx);
+//
+//typedef int(*DDFFplayDecoderCheck)(void *ist);
+//typedef void(*DDFFplayDecoderUpdateDisplay)(void *ist,AVCodecContext *avctx, AVFrame *frame);
+//
+//typedef void(*DDFFplayDecoderSendPacket)(void *ist,AVCodecContext *avctx, AVPacket *packet);
+//typedef int (*DDFFplayerDecoderReceiveFrame)(void *ist,AVCodecContext *avctx, AVFrame *frame);
+//
+//static OnDDFFplayEvent play_event;
+//static DDFFplayDecoderInit decoder_init_event;
+//static DDFFplayDecoderUninit decoder_uninit_event;
+//static DDFFplayDecoderCheck decoder_check_event;
+//static DDFFplayDecoderUpdateDisplay decoder_update_event;
+//static DDFFplayDecoderSendPacket decoder_send_packet_event;
+//static DDFFplayerDecoderReceiveFrame decoder_receive_frame_event;
+//static void *ddffplayer;
+//
 static Uint32  SDLRefreshTimerCB(Uint32 interval, void *opaque) {
     SDL_Event event;
     event.type = FF_REFRESH_EVENT;
@@ -426,8 +426,11 @@ static Uint32  SDLRefreshTimerCB(Uint32 interval, void *opaque) {
 }
 static void ScheduleRefresh_ffplay(VideoState *is, int delay)
 {
+    
     SDL_AddTimer(delay, SDLRefreshTimerCB, is);
 }
+
+
 
 
 

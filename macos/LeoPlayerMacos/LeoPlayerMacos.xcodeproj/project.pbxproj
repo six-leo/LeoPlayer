@@ -30,6 +30,7 @@
 		94476E861F7D12870023627B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94476E851F7D12870023627B /* CoreMedia.framework */; };
 		94476E8E1F7D337B0023627B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94476E8D1F7D337B0023627B /* QuartzCore.framework */; };
 		94476E901F7D33930023627B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94476E8F1F7D33930023627B /* Security.framework */; };
+		948DB21B1F95FAB600A76D64 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 94476E501F7CC7F70023627B /* main.c */; };
 		94F51AD81F7E0B1E008C43E6 /* liblzma.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 94476E891F7D2FB20023627B /* liblzma.tbd */; };
 /* End PBXBuildFile section */
 
@@ -249,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94476E591F7CC8410023627B /* ff_play.c in Sources */,
+				948DB21B1F95FAB600A76D64 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
