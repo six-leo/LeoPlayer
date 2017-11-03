@@ -2,8 +2,8 @@
 //  ff_play_def.h
 //  LeoPlayerMacos
 //
-//  Created by xiaoliu on 2017/9/29.
-//  Copyright © 2017年 xiaoliu. All rights reserved.
+//  Created by leo.liufu on 2017/9/29.
+//  Copyright © 2017年 leo.liufu. All rights reserved.
 //
 
 #ifndef ff_play_def_h
@@ -46,13 +46,23 @@
 
 #include <SDL.h>
 #include <SDL_thread.h>
-
-
 #include <assert.h>
 
+#include <stdbool.h>
 
-const char program_name[] = "ffplay_by_leo";
-const int program_birth_year = 2003;
+#if _WIN32
+
+#pragma comment(lib,"SDL2.lib")
+#pragma comment(lib,"SDL2main.lib")
+#pragma comment(lib,"avcodec.lib")
+#pragma comment(lib,"avfilter.lib")
+#pragma comment(lib,"avdevice.lib")
+#pragma comment(lib,"avformat.lib")
+#pragma comment(lib,"avutil.lib")
+#pragma comment(lib,"swresample.lib")
+#pragma comment(lib,"swscale.lib")
+
+#endif
 
 #define MAX_QUEUE_SIZE (15 * 1024 * 1024)
 #define MIN_FRAMES 25
@@ -297,6 +307,9 @@ typedef struct VideoState {
     SDL_cond *continue_read_thread;
 } VideoState;
 
+static const char program_name[] = "ffplay_by_leo";
+static const int program_birth_year = 2017;
+
 /* options specified by the user */
 static AVInputFormat *file_iformat;
 static const char *input_filename;
@@ -331,7 +344,7 @@ static enum ShowMode show_mode = SHOW_MODE_NONE;
 static const char *audio_codec_name;
 static const char *subtitle_codec_name;
 static const char *video_codec_name;
-double rdftspeed = 0.02;
+static double rdftspeed = 0.02;
 static int64_t cursor_last_shown;
 static int cursor_hidden = 0;
 #if CONFIG_AVFILTER
@@ -385,7 +398,7 @@ static const struct TextureFormatEntry {
 static AVDictionary *format_opts, *codec_opts, *resample_opts;
 
 
-//xiaoliu
+//leo.liufu
 #define FF_REFRESH_EVENT (SDL_USEREVENT+40)
 #define FF_QUIT_EVENT (SDL_USEREVENT + 10)
 #define FF_PAUSE_EVENT (SDL_USEREVENT + 11)

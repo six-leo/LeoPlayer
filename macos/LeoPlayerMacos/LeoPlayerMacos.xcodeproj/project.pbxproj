@@ -31,6 +31,7 @@
 		94476E8E1F7D337B0023627B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94476E8D1F7D337B0023627B /* QuartzCore.framework */; };
 		94476E901F7D33930023627B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94476E8F1F7D33930023627B /* Security.framework */; };
 		948DB21B1F95FAB600A76D64 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 94476E501F7CC7F70023627B /* main.c */; };
+		94A3E27A1FA9BB5B00F67C86 /* leoplayer.c in Sources */ = {isa = PBXBuildFile; fileRef = 94A3E2791FA9BB5B00F67C86 /* leoplayer.c */; };
 		94F51AD81F7E0B1E008C43E6 /* liblzma.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 94476E891F7D2FB20023627B /* liblzma.tbd */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		942FF4D71FAAC3B60042C432 /* player_version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = player_version.h; sourceTree = "<group>"; };
+		942FF4D91FAAC9D00042C432 /* leoplayer_internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = leoplayer_internal.h; sourceTree = "<group>"; };
+		942FF4DA1FAAEAB30042C432 /* ff_msg_queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ff_msg_queue.h; sourceTree = "<group>"; };
+		942FF4DB1FAAEECE0042C432 /* ff_memory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ff_memory.h; sourceTree = "<group>"; };
 		94476E4D1F7CC7F70023627B /* LeoPlayerMacos */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeoPlayerMacos; sourceTree = BUILT_PRODUCTS_DIR; };
 		94476E501F7CC7F70023627B /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		94476E581F7CC8360023627B /* ff_play.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ff_play.c; sourceTree = "<group>"; };
@@ -76,6 +81,9 @@
 		94476E8B1F7D33710023627B /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		94476E8D1F7D337B0023627B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		94476E8F1F7D33930023627B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		94A3E2781FA9BB5B00F67C86 /* leoplayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = leoplayer.h; sourceTree = "<group>"; };
+		94A3E2791FA9BB5B00F67C86 /* leoplayer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = leoplayer.c; sourceTree = "<group>"; };
+		94A3E27B1FA9C79500F67C86 /* ff_inc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ff_inc.h; sourceTree = "<group>"; };
 		94F51ADA1F7E1607008C43E6 /* ff_play.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ff_play.h; sourceTree = "<group>"; };
 		94F51ADB1F7E1913008C43E6 /* ff_play_def.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ff_play_def.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,6 +196,13 @@
 				94476E581F7CC8360023627B /* ff_play.c */,
 				94F51ADA1F7E1607008C43E6 /* ff_play.h */,
 				94F51ADB1F7E1913008C43E6 /* ff_play_def.h */,
+				94A3E2781FA9BB5B00F67C86 /* leoplayer.h */,
+				94A3E2791FA9BB5B00F67C86 /* leoplayer.c */,
+				942FF4D91FAAC9D00042C432 /* leoplayer_internal.h */,
+				94A3E27B1FA9C79500F67C86 /* ff_inc.h */,
+				942FF4D71FAAC3B60042C432 /* player_version.h */,
+				942FF4DA1FAAEAB30042C432 /* ff_msg_queue.h */,
+				942FF4DB1FAAEECE0042C432 /* ff_memory.h */,
 			);
 			path = leoplayer;
 			sourceTree = "<group>";
@@ -249,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A3E27A1FA9BB5B00F67C86 /* leoplayer.c in Sources */,
 				94476E591F7CC8410023627B /* ff_play.c in Sources */,
 				948DB21B1F95FAB600A76D64 /* main.c in Sources */,
 			);
