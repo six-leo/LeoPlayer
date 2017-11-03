@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="leomedia">
+      <UniqueIdentifier>{54daff70-f97e-4c6e-a4c4-7105a5123829}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -24,11 +27,32 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\leomedia\leoplayer\ff_play_def.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="..\..\..\leomedia\leoplayer\ff_inc.h">
+      <Filter>leomedia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\leomedia\leoplayer\ff_memory.h">
+      <Filter>leomedia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\leomedia\leoplayer\ff_msg_queue.h">
+      <Filter>leomedia</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\leomedia\leoplayer\ff_play.h">
-      <Filter>头文件</Filter>
+      <Filter>leomedia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\leomedia\leoplayer\ff_play_def.h">
+      <Filter>leomedia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\leomedia\leoplayer\leoplayer.h">
+      <Filter>leomedia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\leomedia\leoplayer\leoplayer_internal.h">
+      <Filter>leomedia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\leomedia\leoplayer\player_version.h">
+      <Filter>leomedia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\leomedia\leoplayer\leoplayer_config.h">
+      <Filter>leomedia</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -39,7 +63,10 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\leomedia\leoplayer\ff_play.c">
-      <Filter>源文件</Filter>
+      <Filter>leomedia</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\leomedia\leoplayer\leoplayer.c">
+      <Filter>leomedia</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
